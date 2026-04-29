@@ -2,6 +2,40 @@
 
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.querySelector('form');
+    const errorBox = document.getElementById('formError');
+
+    function showFormError(message) {
+        if (!errorBox) {
+            alert(message);
+            return;
+        }
+        errorBox.textContent = message;
+        errorBox.style.display = 'block';
+    }
+
+    function clearFormError() {
+        if (errorBox) {
+            errorBox.textContent = '';
+            errorBox.style.display = 'none';
+        }
+    }
+
+    function isValidInternationalPhone(value) {
+        const normalized = value.replace(/[\s\-().]/g, '');
+        return /^\+?[1-9]\d{7,14}$/.test(normalized);
+    }
+
+    function isStrongPassword(value) {
+        if (typeof value !== 'string') {
+            return false;
+        }
+        return value.length >= 12 &&
+            /[A-Z]/.test(value) &&
+            /[a-z]/.test(value) &&
+            /[0-9]/.test(value) &&
+            /[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]/.test(value) &&
+            !/\s/.test(value);
+    }
     
     form.addEventListener('submit', function(event) {
         event.preventDefault(); // Prevent default form submission
@@ -15,6 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const confirmPassword = document.getElementById('confirmPassword').value;
         
         // Validation
+        clearFormError();
         let isValid = true;
         let errorMessage = '';
         
@@ -30,21 +65,26 @@ document.addEventListener('DOMContentLoaded', function() {
             isValid = false;
             errorMessage = 'Please enter a valid email address.';
         }
-        
-        // Phone validation (numeric)
-        if (isValid && !/^\d+$/.test(phone)) {
+
+        // Phone validation (international format)
+        if (isValid && !isValidInternationalPhone(phone)) {
             isValid = false;
-            errorMessage = 'Phone number must be numeric.';
+            errorMessage = 'Phone number must be in international format and contain 8 to 15 digits. Use leading + and digits only.';
         }
-        
-        // Password match
+
+        // Password strength and match
+        if (isValid && !isStrongPassword(password)) {
+            isValid = false;
+            errorMessage = 'Password must be at least 12 characters and include uppercase, lowercase, number, and symbol.';
+        }
+
         if (isValid && password !== confirmPassword) {
             isValid = false;
             errorMessage = 'Passwords do not match.';
         }
-        
+
         if (!isValid) {
-            alert(errorMessage);
+            showFormError(errorMessage);
             return;
         }
         

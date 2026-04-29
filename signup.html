@@ -76,40 +76,44 @@
             <!-- FULL NAME -->
             <div class="field">
               <label for="fullName">Full Name</label>
-              <input id="fullName" name="fullName" type="text" placeholder="Enter your full name" required />
+              <input id="fullName" name="fullName" type="text" placeholder="Enter your full name" required autocomplete="name" />
             </div>
 
             <!-- EMAIL -->
             <div class="field">
               <label for="email">Email Address</label>
-              <input id="email" name="email" type="email" placeholder="Enter your email" required />
+              <input id="email" name="email" type="email" placeholder="Enter your email" required autocomplete="email" />
             </div>
 
             <!-- PHONE -->
             <div class="field">
               <label for="phone">Phone Number</label>
-              <input id="phone" name="phone" type="tel" placeholder="Enter your phone number" required />
+              <input id="phone" name="phone" type="tel" placeholder="+12345678900" required autocomplete="tel" />
+              <small>Use international format, e.g. +1 555 555 5555. Must be 8 to 15 digits.</small>
             </div>
 
             <!-- PASSWORD -->
             <div class="field">
               <label for="password">Password</label>
-              <input id="password" name="password" type="password" placeholder="Create a password" required />
+              <input id="password" name="password" type="password" placeholder="Create a password" required autocomplete="new-password" />
+              <small>At least 12 characters, including uppercase, lowercase, number, and symbol.</small>
             </div>
 
             <!-- CONFIRM PASSWORD -->
             <div class="field">
               <label for="confirmPassword">Confirm Password</label>
-              <input id="confirmPassword" name="confirmPassword" type="password" placeholder="Confirm your password" required />
+              <input id="confirmPassword" name="confirmPassword" type="password" placeholder="Confirm your password" required autocomplete="new-password" />
             </div>
 
             <!-- LOCATION -->
             <div class="field">
               <label for="location">Location</label>
-              <input id="location" name="location" type="text" placeholder="City or Area" />
+              <input id="location" name="location" type="text" placeholder="City or Area" autocomplete="street-address" />
             </div>
 
           </div>
+
+          <div class="form-error" id="formError" aria-live="polite" style="color:#c0392b; margin-bottom:1rem; display:none;"></div>
 
           <!-- SUBMIT -->
           <div class="form-actions">
