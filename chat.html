@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Chat</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<script src="theme-init.js?v=1"></script>
+</head>
+
+<body>
+
+<header>
+  <div class="container header__inner">
+    <div class="brand">
+      <p class="brand__title">Flood Relief System</p>
+      <p class="brand__tagline">Get instant support</p>
+    </div>
+
+    <nav aria-label="Primary" id="primaryNav">
+      <button class="icon-btn nav__close" type="button" id="navClose" aria-label="Close menu" title="Close menu">
+        <i class="bi bi-x-lg" aria-hidden="true"></i>
+      </button>
+
+      <a class="nav__link" href="home.html">Home</a>
+      <a class="nav__link" href="request.html">Request Help</a>
+      <a class="nav__link" href="viewrequests.html">View Requests</a>
+      <a class="nav__link is-active" href="chat.html">Chat</a>
+      <a class="nav__link" href="reviews.html">Reviews</a>
+    </nav>
+
+    <div class="header__actions">
+      <button class="icon-btn nav-toggle" type="button" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="primaryNav" title="Menu">
+        <i class="bi bi-list" aria-hidden="true"></i>
+      </button>
+      <button class="icon-btn" type="button" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <span aria-hidden="true" id="themeIcon">☀</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+<div class="container">
+
+<div class="chat-box">
+
+  <div class="chat-message user">
+    <p>Hello, I need help</p>
+  </div>
+
+  <div class="chat-message other">
+    <p>I can help you</p>
+  </div>
+
+</div>
+
+<div class="chat-input">
+  <input type="text" placeholder="Type message...">
+  <button><i class="bi bi-send"></i></button>
+</div>
+
+</div>
+</main>
+<script src="requests.js?v=1"></script>
+<script src="app.js?v=1"></script>
+
+</body>
+</html>

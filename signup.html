@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sign Up</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  
+  <script src="theme-init.js?v=1"></script>
+  <link rel="stylesheet" href="style.css?v=1" />
+</head>
+
+<body>
+
+<div class="page-loader" aria-hidden="true">
+  <div class="page-loader__bar"></div>
+</div>
+
+<div class="nav-overlay" id="navOverlay" aria-hidden="true"></div>
+
+<div class="app-shell">
+
+<header>
+  <div class="container header__inner">
+
+    <div class="brand">
+      <p class="brand__title">Flood Relief System</p>
+      <p class="brand__tagline">Join our community</p>
+    </div>
+
+    <nav aria-label="Primary" id="primaryNav">
+      <button class="icon-btn nav__close" type="button" id="navClose" aria-label="Close menu" title="Close menu">
+        <i class="bi bi-x-lg" aria-hidden="true"></i>
+      </button>
+
+      <a class="nav__link" href="home.html">Home</a>
+      <a class="nav__link" href="request.html">Request Help</a>
+      <a class="nav__link" href="viewrequests.html">View Requests</a>
+      <a class="nav__link" href="chat.html">Chat</a>
+      <a class="nav__link" href="reviews.html">Reviews</a>
+      <a class="nav__link is-active" href="signup.html">Sign Up</a>
+    </nav>
+
+    <div class="header__actions">
+      <button class="icon-btn nav-toggle" type="button" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="primaryNav" title="Menu">
+        <i class="bi bi-list" aria-hidden="true"></i>
+      </button>
+      <button class="icon-btn" type="button" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <span aria-hidden="true" id="themeIcon">☀</span>
+      </button>
+    </div>
+
+  </div>
+</header>
+
+<main>
+
+  <div class="form-container">
+    <div class="container">
+
+      <div class="form-card">
+
+        <div class="form-card__header">
+          <h2>Sign Up</h2>
+          <p>Create an account to access all features.</p>
+        </div>
+
+        <form action="home.html" method="post">
+
+          <div class="form-grid">
+
+            <!-- FULL NAME -->
+            <div class="field">
+              <label for="fullName">Full Name</label>
+              <input id="fullName" name="fullName" type="text" placeholder="Enter your full name" required />
+            </div>
+
+            <!-- EMAIL -->
+            <div class="field">
+              <label for="email">Email Address</label>
+              <input id="email" name="email" type="email" placeholder="Enter your email" required />
+            </div>
+
+            <!-- PHONE -->
+            <div class="field">
+              <label for="phone">Phone Number</label>
+              <input id="phone" name="phone" type="tel" placeholder="Enter your phone number" required />
+            </div>
+
+            <!-- PASSWORD -->
+            <div class="field">
+              <label for="password">Password</label>
+              <input id="password" name="password" type="password" placeholder="Create a password" required />
+            </div>
+
+            <!-- CONFIRM PASSWORD -->
+            <div class="field">
+              <label for="confirmPassword">Confirm Password</label>
+              <input id="confirmPassword" name="confirmPassword" type="password" placeholder="Confirm your password" required />
+            </div>
+
+            <!-- LOCATION -->
+            <div class="field">
+              <label for="location">Location</label>
+              <input id="location" name="location" type="text" placeholder="City or Area" />
+            </div>
+
+          </div>
+
+          <!-- SUBMIT -->
+          <div class="form-actions">
+            <button class="btn btn--primary" type="submit">
+              <i class="bi bi-person-plus btn__icon"></i>Sign Up
+            </button>
+          </div>
+
+        </form>
+
+      </div>
+
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <div class="container footer__inner">
+    <p style="margin:0;">© 2026 Flood Relief System</p>
+    <p style="margin:0;">Your request matters</p>
+  </div>
+</footer>
+
+</div>
+
+<script src="app.js?v=1"></script>
+<script src="signup.js"></script>
+
+</body>
+</html></content>
+<parameter name="filePath">c:\Users\Aqsa\Downloads\floodreleifnew\floodreleif\signup.html

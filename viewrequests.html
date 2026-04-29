@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Help Requests</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <script src="theme-init.js?v=1"></script>
+  <link rel="stylesheet" href="style.css?v=1" />
+</head>
+<body>
+
+<div class="page-loader" aria-hidden="true">
+  <div class="page-loader__bar"></div>
+</div>
+
+<div class="nav-overlay" id="navOverlay" aria-hidden="true"></div>
+
+<div class="app-shell">
+<header>
+  <div class="container header__inner">
+    <div class="brand">
+      <p class="brand__title">Flood Relief System</p>
+      <p class="brand__tagline">Support people in need</p>
+    </div>
+
+    <nav aria-label="Primary" id="primaryNav">
+      <button class="icon-btn nav__close" type="button" id="navClose" aria-label="Close menu" title="Close menu">
+        <i class="bi bi-x-lg" aria-hidden="true"></i>
+      </button>
+      <a class="nav__link" href="home.html">Home</a>
+      <a class="nav__link" href="request.html">Request Help</a>
+      <a class="nav__link is-active" href="viewrequests.html">View Requests</a>
+    <a class="nav__link" href="chat.html">Chat</a>
+      <a class="nav__link" href="reviews.html">Reviews</a>
+    </nav>
+
+    <div class="header__actions">
+      <button class="icon-btn nav-toggle" type="button" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="primaryNav" title="Menu">
+        <i class="bi bi-list" aria-hidden="true"></i>
+      </button>
+      <button class="icon-btn" type="button" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <span aria-hidden="true" id="themeIcon">☀</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="requests-bg">
+    <div class="container">
+      <section class="section" style="padding-top:28px;">
+        <div class="cards" aria-label="Help requests">
+          <article class="card">
+            <!-- IMAGE ADDED -->
+  <img src="C:\Users\Aqsa\Downloads\floodreleifnew\floodreleif\images\ali.jpeg" class="request-img" alt="Ali">
+
+            <h3>Ali</h3>
+
+            <div class="request-meta">
+              <span class="badge"><strong>Need:</strong> Food</span>
+              <span class="badge"><strong>Location:</strong> Lahore</span>
+              <span class="badge"><strong>Phone:</strong> 03001234567</span>
+              <span class="badge"><strong>Payment:</strong> JazzCash - 03001234567</span>
+            </div>
+
+            <div class="actions">
+              <div class="actions-row">
+                <button class="btn" type="button" data-action="call"><i class="bi bi-telephone btn__icon" aria-hidden="true"></i>Call</button>
+                <a class="btn btn--primary" href="https://wa.me/923001234567" target="_blank" rel="noopener noreferrer"><i class="bi bi-whatsapp btn__icon" aria-hidden="true"></i>WhatsApp</a>
+              </div>
+              <button class="btn btn--success" type="button" data-action="pay"><i class="bi bi-cash-coin btn__icon" aria-hidden="true"></i>Send Money</button>
+            </div>
+          </article>
+
+          <article class="card">
+           <!-- IMAGE ADDED -->
+  <img src="C:\Users\Aqsa\Downloads\floodreleifnew\floodreleif\images\ali.jpeg" class="request-img" alt="Ali">
+
+            <h3>Sara</h3>
+
+            <div class="request-meta">
+              <span class="badge"><strong>Need:</strong> Clothes</span>
+              <span class="badge"><strong>Location:</strong> Karachi</span>
+              <span class="badge"><strong>Phone:</strong> 03001112222</span>
+              <span class="badge"><strong>Payment:</strong> EasyPaisa - 03001112222</span>
+            </div>
+
+            <div class="actions">
+              <div class="actions-row">
+                <button class="btn" type="button" data-action="call"><i class="bi bi-telephone btn__icon" aria-hidden="true"></i>Call</button>
+                <a class="btn btn--primary" href="https://wa.me/923001112222" target="_blank" rel="noopener noreferrer"><i class="bi bi-whatsapp btn__icon" aria-hidden="true"></i>WhatsApp</a>
+              </div>
+              <button class="btn btn--success" type="button" data-action="pay"><i class="bi bi-cash-coin btn__icon" aria-hidden="true"></i>Send Money</button>
+            </div>
+          </article>
+
+          <article class="card">
+           <!-- IMAGE ADDED -->
+  <img src="C:\Users\Aqsa\Downloads\floodreleifnew\floodreleif\images\ali.jpeg" class="request-img" alt="Ali">
+
+            <h3>Hassan</h3>
+
+            <div class="request-meta">
+              <span class="badge"><strong>Need:</strong> Medicine</span>
+              <span class="badge"><strong>Location:</strong> Faisalabad</span>
+              <span class="badge"><strong>Phone:</strong> 03005556666</span>
+              <span class="badge"><strong>Payment:</strong> JazzCash - 03005556666</span>
+            </div>
+
+            <div class="actions">
+              <div class="actions-row">
+                <button class="btn" type="button" data-action="call"><i class="bi bi-telephone btn__icon" aria-hidden="true"></i>Call</button>
+                <a class="btn btn--primary" href="https://wa.me/923005556666" target="_blank" rel="noopener noreferrer"><i class="bi bi-whatsapp btn__icon" aria-hidden="true"></i>WhatsApp</a>
+              </div>
+              <button class="btn btn--success" type="button" data-action="pay"><i class="bi bi-cash-coin btn__icon" aria-hidden="true"></i>Send Money</button>
+            </div>
+          </article>
+
+          <article class="card">
+           <!-- IMAGE ADDED -->
+  <img src="C:\Users\Aqsa\Downloads\floodreleifnew\floodreleif\images\ali.jpeg" class="request-img" alt="Ali">
+
+            <h3>Ayesha</h3>
+
+            <div class="request-meta">
+              <span class="badge"><strong>Need:</strong> Shelter</span>
+              <span class="badge"><strong>Location:</strong> Multan</span>
+              <span class="badge"><strong>Phone:</strong> 03007778888</span>
+              <span class="badge"><strong>Payment:</strong> EasyPaisa - 03007778888</span>
+            </div>
+
+            <div class="actions">
+              <div class="actions-row">
+                <button class="btn" type="button" data-action="call"><i class="bi bi-telephone btn__icon" aria-hidden="true"></i>Call</button>
+                <a class="btn btn--primary" href="https://wa.me/923007778888" target="_blank" rel="noopener noreferrer"><i class="bi bi-whatsapp btn__icon" aria-hidden="true"></i>WhatsApp</a>
+              </div>
+              <button class="btn btn--success" type="button" data-action="pay"><i class="bi bi-cash-coin btn__icon" aria-hidden="true"></i>Send Money</button>
+            </div>
+          </article>
+        </div>
+      </section>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="container footer__inner">
+    <p style="margin:0;">© 2026 Flood Relief System</p>
+    <p style="margin:0;">Thank you for helping</p>
+  </div>
+</footer>
+</div>
+
+<script src="requests.js?v=1"></script>
+<script src="app.js?v=1"></script>
+
+</body>
+</html>
