@@ -16,7 +16,12 @@ app.use(express.json());
 app.use(express.static('.'));
 
 // MongoDB Connection with IPv4 fix
-const MONGODB_URI = process.env.MONGODB_URI;
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/floodrelief';
+const PORT = process.env.PORT || 5000;
+
+console.log('NODE_ENV:', process.env.NODE_ENV || 'not set');
+console.log('PORT:', PORT);
+console.log('MONGODB_URI:', MONGODB_URI.startsWith('mongodb') ? 'OK' : 'INVALID URI');
 
 mongoose.connect(MONGODB_URI, {
   family: 4  // Force IPv4
@@ -45,7 +50,6 @@ app.get('/health', (req, res) => {
   res.status(200).json({ status: 'ok', message: 'Server is running' });
 });
 
-const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`🚀 Server running on port ${PORT}`);
 });

@@ -103,5 +103,35 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Redirect to home
         window.location.href = 'home.html';
+        
+        // Uncomment below to use API instead of localStorage
+        /*
+        try {
+            const response = await fetch('https://floodrelife-web-project-production.up.railway.app/api/auth/register', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(user)
+            });
+            
+            const data = await response.json();
+            
+            if (response.ok) {
+                // Signup successful
+                localStorage.setItem('token', data.token);
+                localStorage.setItem('user', JSON.stringify(data.user));
+                localStorage.setItem('isLoggedIn', 'true');
+                alert('Signup successful!');
+                window.location.href = 'home.html';
+            } else {
+                // Signup failed
+                showFormError(data.message || 'Signup failed');
+            }
+        } catch (error) {
+            console.error('Signup error:', error);
+            showFormError('Network error. Please try again.');
+        }
+        */
     });
 });
